@@ -15,6 +15,7 @@ import { ImagesComponent } from './movies/movie/images/images.component';
 import { RouterModule } from '@angular/router';
 import { appRoute } from './routes';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoute),
-    HttpClientModule, FormsModule
+    HttpClientModule, FormsModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
