@@ -13,11 +13,11 @@ export class UnreleasedService {
   private url = environment.APIurl;
 
   getMovies() {
-    return this.http.get(this.url + '/movies');
+    return this.http.get<Movie[]>(this.url + '/movies'); // .get(this.url + '/movies');
   }
 
   getMovie(id: number) {
-    return this.http.get(this.url + '/movies/' + id);
+    return this.http.get<Movie>(this.url + '/movies/' + id);
   }
 
   // getImages(id: number) {

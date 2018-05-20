@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+// import { ToasterModule } from 'ngx-toaster/src/lib';
 
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -16,6 +17,9 @@ import { RouterModule } from '@angular/router';
 import { appRoute } from './routes';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +32,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MovieComponent,
     AddMovieComponent,
     AddImageComponent,
-    ImagesComponent
+    ImagesComponent,
+    AdminDashboardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoute),
-    HttpClientModule, FormsModule, BrowserAnimationsModule
+    HttpClientModule, FormsModule, BrowserAnimationsModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
