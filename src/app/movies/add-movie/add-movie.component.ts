@@ -14,6 +14,8 @@ export class AddMovieComponent implements OnInit {
   // now = Date.now();
 
   constructor(private unreleased: UnreleasedService, private router: Router) { }
+  // public youtubePattern = '^(http(s)??\:\/\/)?(www\.|m\.)?((youtube\.com\/watch\?v=)|(youtu.be\/))([a-zA-Z0-9\-_]{11})$';
+
   movie: Movie = {
     ID: 0,
     GenreID: 0,

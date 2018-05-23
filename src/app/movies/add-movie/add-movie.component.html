@@ -1,37 +1,55 @@
 <app-navbar></app-navbar>
-<form #movieForm="ngForm" (ngSubmit)="OnSubmit(movieForm)">
-  <input name="ID" type="hidden" #ID="ngModel" [(ngModel)]="movie.ID">
-  <input name="Created_Date" type="hidden" #Created_Date="ngModel" [(ngModel)]="movie.Created_Date">
-<div class="form-group">
-  <label>Name</label>
-  <input name="Title" #Title="ngModel" [(ngModel)]="movie.Title" placeholder="Title" class="form-control" required>
-</div>
-
-<div class="form-group">
-  <label>URL</label>
-  <input name="Trailer_Url" #Trailer_Url="ngModel" [(ngModel)]="movie.Trailer_Url" placeholder="Youtube Trailer Url" class="form-control" required>
-</div>
-
-<div class="form-group">
-  <label>Description</label>
-  <input name="Description" #Description="ngModel" [(ngModel)]="movie.Description" placeholder="Description" class="form-control" required>
-</div>
-
-<!-- <div class="form-group">
-  <label>Salary</label>
-  <div class="input-group">
-    <div class="input-group-addon">
-      <i class="fa fa-dollar"></i>
+<div class="container">
+  <form #movieForm="ngForm" (ngSubmit)="OnSubmit(movieForm)">
+    <input name="ID" type="hidden" #ID="ngModel" [(ngModel)]="movie.ID">
+    <input name="Created_Date" type="hidden" #Created_Date="ngModel" [(ngModel)]="movie.Created_Date">
+    <div class="form-group">
+      <label>Name</label>
+      <input name="Title" #Title="ngModel" [(ngModel)]="movie.Title" placeholder="Title" class="form-control" required>
     </div>
-    <input name="salary" type="number" required #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary" class="form-control">
-  </div>
-</div> -->
-<div class="form-group">
-  <button class="btn btn-default" type="submit" [disabled]="!movieForm.valid">
-    <i class="fa fa-floppy-o"></i>
-    Submit</button>
-  <button class="btn btn-default" type="button" (click)="Reset(movieForm)" >
-    <i class="fa fa-repeat"></i>
-    Reset</button>
+
+    <div class="form-group">
+      <label>URL</label>
+      <input name="Trailer_Url" #Trailer_Url="ngModel" [(ngModel)]="movie.Trailer_Url" pattern="^(http(s)??\:\/\/)?(www\.|m\.)?((youtube\.com\/watch\?v=)|(youtu.be\/))([a-zA-Z0-9\-_]{11})$"
+        placeholder="Youtube Trailer Url" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label>Director</label>
+      <input name="Director" #Director="ngModel" [(ngModel)]="movie.Director" placeholder="Director" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Producer</label>
+      <input name="Producer" #Producer="ngModel" [(ngModel)]="movie.Producer" placeholder="Producer" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Writer</label>
+      <input name="Writer" #Writer="ngModel" [(ngModel)]="movie.Writer" placeholder="Writer" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <input name="Description" #Description="ngModel" [(ngModel)]="movie.Description" placeholder="Description" class="form-control" required>
+    </div>
+
+    <!-- <div class="form-group">
+    <label>Salary</label>
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input name="salary" type="number" required #salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary" class="form-control">
+    </div>
+  </div> -->
+    <div class="form-group">
+      <button class="btn btn-default" type="submit" [disabled]="!movieForm.valid">
+        <i class="fa fa-floppy-o"></i>
+        Submit</button>
+      <button class="btn btn-default" type="button" (click)="Reset(movieForm)">
+        <i class="fa fa-repeat"></i>
+        Reset</button>
+    </div>
+  </form>
 </div>
-</form>
