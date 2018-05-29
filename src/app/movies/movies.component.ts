@@ -16,6 +16,7 @@ export class MoviesComponent implements OnInit {
     this.unreleasedService.getMovies().subscribe(data => {
       // debugger;
       this.movies = data;
+      console.log(data);
     });
   }
 

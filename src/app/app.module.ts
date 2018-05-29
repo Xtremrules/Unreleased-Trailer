@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SafePipe } from './shared/pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AddImageComponent,
     ImagesComponent,
     AdminDashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
