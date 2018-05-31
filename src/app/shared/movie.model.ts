@@ -6,6 +6,7 @@ export class Movie {
     Writer: string;
     Producer: string;
     // ImageID: number;
+    Image_Url: string;
     GenreID: number;
     Release_Date?: Date;
     Trailer_Url: string;
